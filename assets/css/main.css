@@ -269,6 +269,7 @@ body.begie {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    z-index: 10;
 }
 .sidepj-subtit-tx{
     font-family: 'Pretendard-Regular';
@@ -338,7 +339,7 @@ body.begie {
         align-items: center;
         justify-content: center;
         margin-left: 0px;
-        font-size: 3vw;
+        font-size: .7em;
         width: 100%;
     }
     .project-tx-block .pj-tit{

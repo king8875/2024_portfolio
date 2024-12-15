@@ -21,7 +21,6 @@
     flex-direction: column;
     gap: 10px;
 }
-.header-tit{}
 .header-inner .header-quick-block .header-quick-list{
     display: flex;
     gap: 10px;
@@ -29,7 +28,6 @@
 .header-quick-item{ opacity: 0.6; }
 .header-quick-item.on{ opacity: 1; }
 .header-quick-item.hidden{ opacity: 0; }
-.header-inner .header-quick-block .header-quick-item a{ }
 .header-quick-item:hover{
     transform: scale(1.1);
     transition: .6s;
@@ -96,8 +94,8 @@
     height: 100vh;
 }
 .address-content{
+    padding: 0px 100px;
     margin-top: 20vh;
-    margin-left: 10vw;
 }
 .contact-address-block .contact-name{
     font-size: 6em;
@@ -125,23 +123,25 @@
 }
 .velog-ic svg,
 .github-ic path
-{
-    fill: var(--beige);
-}
+{ fill: var(--beige); }
 .copyrights{ font-size: .7em; }
 
 .footer-marquee-block{
+    display: flex;
     position: absolute;
     bottom: 0;left: 0;
-    display: flex;
+    overflow: hidden;
 }
-.footer-marquee-block .marquee-list{ display: flex; }
+.footer-marquee-block .marquee-list{ 
+    display: flex; 
+    gap: 30px;
+    padding: 20px;
+    animation: marquee 20s linear infinite;
+}
 .footer-marquee-block .marquee-list .marquee-item{
-    padding: 30px;
     font-size: 2vw;
     text-transform: uppercase;
     font-weight: 700;
-    animation: marquee 5s linear infinite;
 }
 @keyframes marquee {
     0%{ transform: translateX(0%); }
@@ -169,9 +169,11 @@
 
     .contact-block .contact-intro-block .contact-tit{ top: 200px; font-size: 30vw; }
     .contact-address-block{ padding-top: 70px; }
-    .address-content{ margin-top: 5vh; }
     
     
     .address-content address{ font-size: 1em; }
-    .footer-marquee-block{display: none;}
+    .address-content{
+        padding: 0px 20px;
+        margin-top: 10vh;
+    }
 }
