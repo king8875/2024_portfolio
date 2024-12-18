@@ -221,7 +221,10 @@ body.begie {
 }
 .sidepj-inner .projects-tit h2{ margin-bottom: 50px; }
 .sidepj-content-list{ 
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,auto);
+    row-gap: 100px;
     padding-top: 100px;
 }
 .sidepj-item{
