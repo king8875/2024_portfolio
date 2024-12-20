@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: 'Droid Serif';
     font-weight: 400;
     src: url(../fonts/tDbK2oqRg1oM3QBjjcaDkOr4nAfcHi6FRUI.woff2) format('woff2');
@@ -7,7 +7,7 @@
     font-family: 'Droid Serif';
     font-weight: 700;
     src: url(../fonts/tDbX2oqRg1oM3QBjjcaDkOr4lLz5CwOnSGjW7BA.woff2) format('woff2');
-}
+} */
 @font-face {
     font-family: 'Droid Serif';
     font-weight: 400;
@@ -20,8 +20,14 @@
 }
 
 @font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-family: 'Pretendard';
+    font-weight: 900;
+    font-display: swap;
+    src: url(../fonts/Pretendard-Black.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Pretendard';
     font-weight: 500;
-    font-style: normal;
+    font-display: swap;
+    src: url(../fonts/Pretendard-Medium.woff2) format('woff2');
 }

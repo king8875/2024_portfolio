@@ -40,7 +40,12 @@
     gap: 10px;
 }
 .header-hello-block .header-tit{ opacity: 0.6; }
-.header-hello-block p{ letter-spacing: 1px; }
+.header-hello-block p{ 
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 1px; 
+}
 
 .header-contact-block{
     display: flex;

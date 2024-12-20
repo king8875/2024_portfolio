@@ -226,6 +226,7 @@ body.begie {
     grid-template-rows: repeat(2,auto);
     row-gap: 100px;
     padding-top: 100px;
+    padding: 0 100px;
 }
 .sidepj-item{
     position: relative;
@@ -245,8 +246,7 @@ body.begie {
     transition: .3s;
 }
 .sidepj-item:hover .sidepj-item-bg{ transform: scale(1.1); } 
-.sidepj-item:first-child{ margin-left: 50px; }
-.sidepj-item:last-child{ margin-left: auto; }
+.sidepj-item:nth-child(2){ margin-left: auto; }
 .sidepj-tx-block{
     display: flex;
     align-items: center;
@@ -403,7 +403,7 @@ body.begie {
         flex-direction: column;
         gap: 30px;
         margin-top: 100px;
+        padding: 0;
     }
-    .sidepj-item:first-child{ margin-left: 0px; }
     .btn-weblink.codereview{ margin-top: 10px; }
 }
