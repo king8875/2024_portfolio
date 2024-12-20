@@ -240,13 +240,21 @@ body.begie {
     top: 0;left: 0;bottom: 0;right: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
     border-radius: 10px;
     z-index: -10;
     transition: .3s;
 }
 .sidepj-item:hover .sidepj-item-bg{ transform: scale(1.1); } 
 .sidepj-item:nth-child(2){ margin-left: auto; }
+.sidepj-item:nth-child(3){
+    position: relative;
+    z-index: -1;
+    background: #fff;
+}
+.sidepj-item:nth-child(3) .sidepj-item-bg{
+    width: 100%;
+    height: auto;
+}
 .sidepj-tx-block{
     display: flex;
     align-items: center;
