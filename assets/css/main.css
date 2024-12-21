@@ -188,6 +188,7 @@ body.begie {
 }
 .pj-tag-item.percent span{ font-weight: 700;}
 .projects-sec .btn-weblink{
+    display: block;
     margin-left: auto;
     margin-top: 10px;
 }
@@ -202,6 +203,11 @@ body.begie {
     color: var(--dark);
 }
 .btn-weblink.codereview{
+    background: var(--dark);
+    color: var(--beige);
+    border: 1px solid var(--beige);
+}
+.btn-weblink.github{
     background: var(--dark);
     color: var(--beige);
     border: 1px solid var(--beige);
@@ -284,7 +290,6 @@ body.begie {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    z-index: 10;
 }
 .sidepj-subtit-tx{
     font-family: 'Pretendard-Regular';

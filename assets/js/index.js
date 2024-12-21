@@ -185,23 +185,23 @@ mm.add("(min-width:769px)",function(){
         x:function(){ return (window.innerWidth - 200); }
     });
     // sidepj gsap
-    const sidepj = gsap.timeline({
-        scrollTrigger: {
-            trigger:'.sidepj-sec',
-            start:"0% 0%",
-            end:"100% 100%",
-            scrub:1,
-            onEnter: function(){
-                gsap.to('.bottom-overlay',{autoAlpha:0});
-                $('.custom-cursor').addClass('white');
-            },
-            onLeaveBack: function(){
-                gsap.to('.bottom-overlay',{autoAlpha:1});
-            }
-        },
-    });
-    sidepj.from('.sidepj-content-list .sidepj-item:first-child',{y:100});
-    sidepj.from('.sidepj-content-list .sidepj-item:nth-child(2)',{y:150});
+    // const sidepj = gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger:'.sidepj-sec',
+    //         start:"0% 0%",
+    //         end:"100% 100%",
+    //         scrub:1,
+    //         onEnter: function(){
+    //             gsap.to('.bottom-overlay',{autoAlpha:0});
+    //             $('.custom-cursor').addClass('white');
+    //         },
+    //         onLeaveBack: function(){
+    //             gsap.to('.bottom-overlay',{autoAlpha:1});
+    //         }
+    //     },
+    // });
+    // sidepj.from('.sidepj-content-list .sidepj-item:first-child',{y:100});
+    // sidepj.from('.sidepj-content-list .sidepj-item:nth-child(2)',{y:150});
    
 });
 //mobie
