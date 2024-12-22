@@ -87,7 +87,9 @@
     position: sticky;
     display: flex;
     justify-content: center;
-    top: 100px;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
     font-size: 16vw;
     font-weight: 700;
     text-transform: uppercase;
