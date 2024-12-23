@@ -24,12 +24,12 @@ lottie.loadAnimation({
 
 //text분리 함수
 const splitText = new SplitType('[data-text="split"]', { types: 'chars' });
-$('[data-text="split"]').find('.char').wrapInner('<div class="char-wrap">')
-$('[data-text="split"]').find('.char-wrap').each(function (index) {
-    // 홀수 인덱스에는 -100%, 짝수 인덱스에는 100%를 적용
-    const transformValue = index % 2 === 0 ? '100%' : '-100%';
-    $(this).css('transform', `translateX(${transformValue})`);
-});
+// $('[data-text="split"]').find('.char').wrapInner('<div class="char-wrap">')
+// $('[data-text="split"]').find('.char-wrap').each(function (index) {
+//     // 홀수 인덱스에는 -100%, 짝수 인덱스에는 100%를 적용
+//     const transformValue = index % 2 === 0 ? '100%' : '-100%';
+//     $(this).css('transform', `translateX(${transformValue})`);
+// });
 
 // lenis scrollTo
 $('.header-quick-item:nth-child(3)').click(function(e){
@@ -66,30 +66,30 @@ $('.header-quick-item').on('click',function(){
 });
 
 // about gsap
-gsap.set('.about-left-block',{autoAlpha:0});
-gsap.set('.about-right-block',{autoAlpha:0});
-const about = gsap.to('.about-left-block',{
-    scrollTrigger : {
-        trigger :'.about-sec',
-        start:"0% 50%",
-        end: "100% 100%",
-        scrub:1,
-    },
-    autoAlpha:1,
-    y:50,
-    duration:1
-});
-const about02 = gsap.to('.about-right-block',{
-    scrollTrigger : {
-        trigger :'.about-sec',
-        start:"70% 70%",
-        end: "100% 100%",
-        scrub:1,
-    },
-    autoAlpha:1,
-    y:20,
-    duration:1
-});
+// gsap.set('.about-left-block',{autoAlpha:0});
+// gsap.set('.about-right-block',{autoAlpha:0});
+// const about = gsap.to('.about-left-block',{
+//     scrollTrigger : {
+//         trigger :'.about-sec',
+//         start:"0% 50%",
+//         end: "100% 100%",
+//         scrub:1,
+//     },
+//     autoAlpha:1,
+//     y:50,
+//     duration:1
+// });
+// const about02 = gsap.to('.about-right-block',{
+//     scrollTrigger : {
+//         trigger :'.about-sec',
+//         start:"70% 70%",
+//         end: "100% 100%",
+//         scrub:1,
+//     },
+//     autoAlpha:1,
+//     y:20,
+//     duration:1
+// });
 
 // contact gsap
 gsap.set('.contact-tit',{autoAlpha:0});
@@ -129,7 +129,7 @@ const marquee = gsap.to('.footer-marquee-block',{
 let mm = gsap.matchMedia();
 
 //pc
-mm.add("(min-width:769px)",function(){
+mm.add("(min-width:768px)",function(){
     ScrollTrigger.create({
         trigger:'.sidepj-sec',
         start:"0% 30%",
@@ -138,31 +138,63 @@ mm.add("(min-width:769px)",function(){
             targets:"body",
             className:"begie"
         },
+        onEnter:{
+            
+        }
     });
     // intro gsap
     gsap.set('.intro-tx .char-wrap',{autoAlpha:0});
-    gsap.set('intro__ic-scrolldown',{autoAlpha:0});
+    // gsap.set('intro__ic-scrolldown',{autoAlpha:0});
+
+
+    gsap.to('.intro-sec .intro-inner .intro-tx .char', {
+        delay:0.2,
+        y:0,
+        stagger:{
+            from:'random',
+            each:0.01
+        }
+    });
+
+    gsap.to('.intro-sec',{
+        scrollTrigger:{
+            trigger:".intro-sec",
+            start: '0% 0%',
+            end: '100% 0%',
+            scrub:0
+        },
+        filter:"brightness(0)"
+    })
+
     const intro = gsap.timeline();
     intro.to('.intro-tx .char-wrap',{ 
         x:0,
-        duration:0.8,
+        duration:0.4,
         autoAlpha:1,
-        delay:1
+        delay:0.3
     })
     intro.from('.header',{autoAlpha:0});
-    intro.from('.intro-tx',{ y:-300, duration:1 });
-    intro.from('intro__ic-scrolldown',{autoAlpha:1});
 
-    const introtx = gsap.to('.intro-tx .char-wrap',{
-        scrollTrigger : {
-            trigger :'.intro-sec',
-            start:"50% 50%",
-            end: "100% 50%",
-            scrub:1,
-        },
-        y:-100
-    });
+
+    // intro.from('.intro-tx',{ y:-300, duration:1 });
+
+    // const introtx = gsap.to('.intro-tx .char-wrap',{
+    //     scrollTrigger : {
+    //         trigger :'.intro-sec',
+    //         start:"50% 50%",
+    //         end: "100% 50%",
+    //         scrub:1,
+    //     },
+    //     y:-100
+    // });
+
     // about gsap
+
+
+
+
+
+
     const lottie01 = gsap.to('.lottie-block',{
         scrollTrigger : {
             trigger :'.about-sec',
@@ -182,7 +214,7 @@ mm.add("(min-width:769px)",function(){
             invalidateOnRefresh: true,
         },
         xPercent: -100,
-        x:function(){ return (window.innerWidth - 200); }
+        x:function(){ return (window.innerWidth - 65); }
     });
     // sidepj gsap
     const sidepj = gsap.timeline({
