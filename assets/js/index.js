@@ -47,7 +47,6 @@ $('.header-quick-item:last-child').click(function(e){
     });
 });
 
-
 // header gsap
 let lastScrollY = window.scrollY;
 const header = $('.header');
@@ -65,39 +64,13 @@ $('.header-quick-item').on('click',function(){
     $(this).addClass('on');
 });
 
-// about gsap
-// gsap.set('.about-left-block',{autoAlpha:0});
-// gsap.set('.about-right-block',{autoAlpha:0});
-// const about = gsap.to('.about-left-block',{
-//     scrollTrigger : {
-//         trigger :'.about-sec',
-//         start:"0% 50%",
-//         end: "100% 100%",
-//         scrub:1,
-//     },
-//     autoAlpha:1,
-//     y:50,
-//     duration:1
-// });
-// const about02 = gsap.to('.about-right-block',{
-//     scrollTrigger : {
-//         trigger :'.about-sec',
-//         start:"70% 70%",
-//         end: "100% 100%",
-//         scrub:1,
-//     },
-//     autoAlpha:1,
-//     y:20,
-//     duration:1
-// });
-
 // contact gsap
 gsap.set('.contact-tit',{autoAlpha:0});
 const contact = gsap.timeline({
     scrollTrigger: {
         trigger :'.contact-intro-block',
-        start: "40% 50%",
-        end: "40% 50%",
+        start: "0% 10%",
+        end: "0% 10%",
         scrub:1,
     }
 });
@@ -113,7 +86,6 @@ const marquee = gsap.to('.footer-marquee-block',{
         start:"90% 100%",
         end:"100% 100%",
         scrub:1,
-        // markers:true,
         onEnter:function(){
             gsap.to('.footer-marquee-block',{
                 y:0,
@@ -138,13 +110,10 @@ mm.add("(min-width:768px)",function(){
             targets:"body",
             className:"begie"
         },
-        onEnter:{
-            
-        }
+        
     });
     // intro gsap
     gsap.set('.intro-tx .char-wrap',{autoAlpha:0});
-    // gsap.set('intro__ic-scrolldown',{autoAlpha:0});
 
 
     gsap.to('.intro-sec .intro-inner .intro-tx .char', {
@@ -175,26 +144,7 @@ mm.add("(min-width:768px)",function(){
     })
     intro.from('.header',{autoAlpha:0});
 
-
-    // intro.from('.intro-tx',{ y:-300, duration:1 });
-
-    // const introtx = gsap.to('.intro-tx .char-wrap',{
-    //     scrollTrigger : {
-    //         trigger :'.intro-sec',
-    //         start:"50% 50%",
-    //         end: "100% 50%",
-    //         scrub:1,
-    //     },
-    //     y:-100
-    // });
-
     // about gsap
-
-
-
-
-
-
     const lottie01 = gsap.to('.lottie-block',{
         scrollTrigger : {
             trigger :'.about-sec',
@@ -232,9 +182,6 @@ mm.add("(min-width:768px)",function(){
             }
         },
     });
-    // sidepj.from('.sidepj-content-list .sidepj-item:first-child',{y:100});
-    // sidepj.from('.sidepj-content-list .sidepj-item:nth-child(2)',{y:150});
-   
 });
 //mobie
 mm.add("(max-width:768px)",function(){
