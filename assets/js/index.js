@@ -19,17 +19,12 @@ lottie.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '/landing/assets/video/lottie_01.json'
+    path: './assets/video/lottie_01.json'
 });
 
 //text분리 함수
 const splitText = new SplitType('[data-text="split"]', { types: 'chars' });
-// $('[data-text="split"]').find('.char').wrapInner('<div class="char-wrap">')
-// $('[data-text="split"]').find('.char-wrap').each(function (index) {
-//     // 홀수 인덱스에는 -100%, 짝수 인덱스에는 100%를 적용
-//     const transformValue = index % 2 === 0 ? '100%' : '-100%';
-//     $(this).css('transform', `translateX(${transformValue})`);
-// });
+
 
 // lenis scrollTo
 $('.header-quick-item:nth-child(3)').click(function(e){
@@ -102,6 +97,8 @@ let mm = gsap.matchMedia();
 
 //pc
 mm.add("(min-width:768px)",function(){
+    $('.header-quick-block .header-quick-item:last-child').addClass('hidden');
+
     ScrollTrigger.create({
         trigger:'.sidepj-sec',
         start:"0% 30%",
@@ -185,21 +182,18 @@ mm.add("(min-width:768px)",function(){
 });
 //mobie
 mm.add("(max-width:768px)",function(){
-    
+    $('.header-quick-item').removeClass('hidden');
     // intro gsap
     gsap.set('.intro-tx .char-wrap',{autoAlpha:0});
-    const intro = gsap.timeline();
-    intro.to('.intro-tx .char-wrap',{ 
-        x:0,
-        duration:0.8,
-        autoAlpha:1,
-        delay:1
-    })
-    intro.from('.header',{autoAlpha:0});
-    intro.from('.intro-tx',{
-        y:-400,
-        duration:1
+    gsap.to('.intro-sec .intro-inner .intro-tx .char', {
+        delay:0.2,
+        y:0,
+        stagger:{
+            from:'random',
+            each:0.01
+        }
     });
+
     const introtx = gsap.to('.intro-tx .char-wrap',{
         scrollTrigger : {
             trigger :'.intro-sec',
@@ -208,18 +202,5 @@ mm.add("(max-width:768px)",function(){
             scrub:1,
         },
         y:-100
-    });
-
-    // mainprojects gsap
-    const projects = gsap.to('.projects-list',{
-        scrollTrigger: {
-            trigger: '.projects-sec',
-            start:"0% 0%",
-            end: "100% 100%",
-            scrub: 1,
-            invalidateOnRefresh: true,
-        },
-        xPercent: -100,
-        x:function(){ return (window.innerWidth - 50); }
     });
 });
