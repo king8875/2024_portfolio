@@ -117,8 +117,6 @@ body.begie {
     width: 80vw;
     overflow: hidden;
 }
-.projects-inner .projects-link{
-}
 .projects-inner .projects-item:hover .project-img-block img{ transform: scale(1.1); }
 .ssg-img{ background-position: 100px 10px; }
 .project-img-block video{
@@ -266,7 +264,7 @@ body.begie {
     font-weight: 700;
     z-index: 10;
     margin-top: 100px;
-    margin-bottom: 260px;
+    margin-bottom: 200px;
     font-family: var(--font-en);
 }
 .sidepj-subtit{ 
@@ -296,11 +294,10 @@ body.begie {
 }
 
 .sidepj-tag-list{
-    position: absolute;
-    bottom: 0; left: 0;
+    position: relative;
     display: flex;
-    padding: 30px 50px;
     gap: 10px;
+    margin-bottom: 10px;
 }
 .sidepj-tag-list .sidepj-tag-item{
     border: 1px solid var(--beige);
@@ -320,15 +317,26 @@ body.begie {
 }
 
 
-@media (min-width:769px) {
+@media (max-width:1330px) {
+    .sidepj-tag-list{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,auto);
+        text-align: center;
+    }
+}
+@media (max-width:987px) {
+    .sidepj-item{
+        position: relative;
+        height: 80vh;
+        padding: 0 20px;
+        overflow: hidden;
+    }
 }
 /* mobile */
 @media (max-width:768px) {
     /* intro section */
-   
-    
     .intro-sec .intro-inner .intro-tx{ font-size: 23vw; }
-
     /* about section */
     .about-inner .about-left-block{ font-size: 18vw; }
     .about-inner .about-right-block{ 
@@ -436,10 +444,24 @@ body.begie {
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: repeat(2,auto);
-        padding: 20px;
-        gap: 10px;
+        padding: 0px;
+        gap: 5px;
     }
-    .sidepj-tag-list .sidepj-tag-item{
-        text-align: center;
+    .sidepj-tag-list .sidepj-tag-item{ text-align: center; }
+}
+@media (max-width:500px) {
+    .about-inner{
+        padding: 10px;
+        justify-content: center;
+        gap: 50px;
     }
+    .project-tx-block{ padding: 0 10px; }
+    .project-tx-block .pj-tit{ font-size: 70px; } 
+    .pj-tag-list{ padding: 10px; }
+    /* sidepj section */
+    .sidepj-sec{ padding: 10px; }
+    .sidepj-sec .sidepj-inner .projects-tit{ padding: 0; }
+    .sidepj-sec .sidepj-inner .projects-tit h2{ font-size: 15vw; }
+    .sidepj-item{ padding: 0px 10px; }
+    .sidepj-tag-list .sidepj-tag-item{ padding: 4px 10px; }
 }

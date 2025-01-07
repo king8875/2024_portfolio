@@ -214,3 +214,11 @@
         animation: marquee 35s linear infinite;
     }
 }
+
+@media (max-width:500px) {
+    /* header */
+    .header-inner{
+        padding: 10px;
+        gap: 10px;
+    }
+}
