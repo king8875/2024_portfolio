@@ -142,10 +142,11 @@
     position: absolute;
     bottom: 0;left: 0;
     overflow-x: hidden;
+    gap: 10px;
 }
 .footer-marquee-block .marquee-list{ 
     display: flex; 
-    gap: 30px;
+    gap: 10px;
     animation: marquee 30s linear infinite;
     font-family: var(--font-en);
 }
