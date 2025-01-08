@@ -240,8 +240,9 @@ body.begie {
 }
 .sidepj-item{
     position: relative;
+    width: 100%;
     height: 80vh;
-    padding: 0 50px;
+    padding: 10px 50px;
     overflow: hidden;
 }
 .sidepj-item-bg{
@@ -257,14 +258,14 @@ body.begie {
 .sidepj-tx-block{
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
 }
 .sidepj-item-tit{
     display: flex;
     font-size: 5vw;
     font-weight: 700;
     z-index: 10;
-    margin-top: 100px;
-    margin-bottom: 200px;
     font-family: var(--font-en);
 }
 .sidepj-subtit{ 
@@ -384,7 +385,7 @@ body.begie {
         margin-top: 200px;
     }
     .btn-weblink{
-        padding: 15px 20px;
+        padding: 12px 20px;
         width: 100%;
     }
     .pj-tag-list{
@@ -423,13 +424,13 @@ body.begie {
     .sidepj-sec .projects-tit-subtit{
         font-size: 3vw;
         font-weight: 500;
-        max-width: 300px;
+        max-width: 500px;
         line-height: 1.5;
     }
     .sidepj-item{
         position: relative;
         height: 80vh;
-        padding: 0px 20px;
+        padding: 20px 20px;
         overflow: hidden;
     }
     .sidepj-item-tit{
@@ -437,8 +438,7 @@ body.begie {
         font-size: 15vw;
         font-weight: 700;
         z-index: 10;
-        margin-top: 50px;
-        margin-bottom: 200px;
+       
     }
     .sidepj-tag-list{
         display: grid;
@@ -462,6 +462,7 @@ body.begie {
     .sidepj-sec{ padding: 10px; }
     .sidepj-sec .sidepj-inner .projects-tit{ padding: 0; }
     .sidepj-sec .sidepj-inner .projects-tit h2{ font-size: 15vw; }
-    .sidepj-item{ padding: 0px 10px; }
+    .sidepj-item{ padding: 10px 10px; }
     .sidepj-tag-list .sidepj-tag-item{ padding: 4px 10px; }
+   
 }

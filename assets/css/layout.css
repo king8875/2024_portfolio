@@ -141,7 +141,8 @@
     display: flex;
     position: absolute;
     bottom: 0;left: 0;
-    overflow-x: hidden;
+    width: 100%;
+    overflow: hidden;
     gap: 10px;
 }
 .footer-marquee-block .marquee-list{ 
