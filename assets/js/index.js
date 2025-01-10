@@ -96,7 +96,7 @@ const marquee = gsap.to('.footer-marquee-block',{
 let mm = gsap.matchMedia();
 
 //pc
-mm.add("(min-width:768px)",function(){
+mm.add("(min-width:769px)",function(){
     $('.header-quick-block .header-quick-item:last-child').addClass('hidden');
 
     ScrollTrigger.create({

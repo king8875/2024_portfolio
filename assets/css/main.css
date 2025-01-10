@@ -110,7 +110,7 @@ body.begie {
 }
 .projects-inner .projects-list{
     display: flex;
-    height: 100%;
+    height: 100vh;
 }
 .projects-inner .projects-item{
     position: relative;
@@ -118,7 +118,7 @@ body.begie {
     overflow: hidden;
 }
 .projects-inner .projects-item:hover .project-img-block img{ transform: scale(1.1); }
-.ssg-img{ background-position: 100px 10px; }
+
 .project-img-block video{
     width: 100%;
     height: 100%;
@@ -150,25 +150,24 @@ body.begie {
     opacity: 0.5;
 }
 .project-tx-block{
+    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     width: 100%;
     height: 100%;
     padding: 80px 30px;
 }
 .project-tx-block .pj-tit{
-    font-size: 80px;
+    font-size: 100px;
     font-family: var(--font-en);
     font-weight: 700;
     margin-bottom: 30px;
-    margin-top: 500px;
 }
 .pj-tag-list{
-    position: absolute;
-    bottom: 0;left: 0;
     display: flex;
     gap: 5px;
-    padding: 30px;
+    margin-bottom: 20px;
 }
 .pj-tag-item{
     font-size: 12px;
@@ -187,12 +186,28 @@ body.begie {
     margin-top: 10px;
 }
 .btn-weblink{
+    position: relative;
     padding: 15px 50px;
     font-size: 1em;
     transition: .3s;
 }
-.btn-weblink.sitelink{
-    background: var(--beige);
+.projects-sec .btn-weblink.sitelink{
+    background: linear-gradient(to left, var(--beige) 50%, white 50%); 
+    color: var(--dark);
+    background-size: 200%;
+    background-position: right;
+}
+.btn-weblink.sitelink:hover{
+    background-position: left;
+}
+.projects-sec .btn-weblink.codereview{
+    background: linear-gradient(to left, var(--dark) 50%, var(--beige) 50%); 
+    color: var(--beige);
+    background-size: 200%;
+    background-position: right;
+}
+.projects-sec .btn-weblink.codereview:hover{
+    background-position: left;
     color: var(--dark);
 }
 .btn-weblink.codereview{
@@ -205,10 +220,7 @@ body.begie {
     color: var(--beige);
     border: 1px solid var(--beige);
 }
-.btn-weblink:hover{
-    background: #fff;
-    color: #000;
-}
+
 
 /* sidepj section */
 .sidepj-sec{ height:300vh;  }
@@ -242,7 +254,7 @@ body.begie {
     position: relative;
     width: 100%;
     height: 80vh;
-    padding: 10px 50px;
+    padding: 20px 50px;
     overflow: hidden;
 }
 .sidepj-item-bg{
@@ -286,6 +298,10 @@ body.begie {
     text-align: center;
     width: 100%;
     height: 100%;
+}
+.sidepj-subtit .btn-weblink.sitelink{
+    background: var(--beige);
+    color: var(--dark);
 }
 .sidepj-subtit-tx{
     line-height: 5vh;
@@ -369,12 +385,13 @@ body.begie {
     .projects-inner .projects-item{
         position: relative;
         width: 100%;
-        height: 80vh;
+        height: 700px;
         overflow: hidden;
     }
     .project-tx-block{
         display: flex;
         flex-direction: column;
+        justify-content: center;
         width: 100%;
         height: 100%;
         padding: 0 20px;
@@ -382,7 +399,7 @@ body.begie {
     .project-tx-block .pj-tit{
         font-size: 80px;
         margin-bottom: 10px;
-        margin-top: 200px;
+        margin-top: 100px;
     }
     .btn-weblink{
         padding: 12px 20px;
