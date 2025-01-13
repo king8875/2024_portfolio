@@ -462,7 +462,10 @@ body.begie {
     }
     .project-tx-block{ padding: 0 10px; }
     .project-tx-block .pj-tit{ font-size: 70px; } 
-    .pj-tag-list{ padding: 10px; }
+    .pj-tag-list{ 
+        padding: 0px; 
+        text-align: center;
+    }
     /* sidepj section */
     .sidepj-sec{ padding: 10px; }
     .sidepj-sec .sidepj-inner .projects-tit{ padding: 0; }

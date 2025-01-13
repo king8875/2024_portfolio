@@ -183,17 +183,12 @@
     .header-contact-block{ display: none; }
 
     /* footer */
-    .footer .footer-inner{
-        height: 100vh;
-    }
-    .contact-block .contact-intro-block{
-        height: 300vh;
-    }
+    .footer .footer-inner{ height: 100vh; }
+    .contact-block .contact-intro-block{ height: 300vh; }
     .contact-block .contact-intro-block .contact-tit{
-        font-size: 32vw;
+        font-size: 34vw;
         letter-spacing: 1vw;
     }
-
     .contact-address-block{
         height: 80vh;
         padding-top: 0px;
@@ -208,9 +203,7 @@
         font-size: 15vw;
         margin-bottom: 50px;
     }
-    .footer-marquee-block .marquee-list .marquee-item{
-        font-size: 15vw;
-    }
+    .footer-marquee-block .marquee-list .marquee-item{ font-size: 15vw; }
     .footer-marquee-block .marquee-list{ 
         gap: 10px;
         animation: marquee 35s linear infinite;
@@ -223,4 +216,6 @@
         padding: 10px;
         gap: 10px;
     }
+    /* footer */
+    .address-content{ padding: 0px 10px; }
 }
