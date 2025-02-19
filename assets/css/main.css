@@ -135,6 +135,7 @@ body.begie {
     object-fit: cover;
     z-index: -10;
 }
+
 .projects-inner .projects-link img{ transition: .5s ease; }
 .projects-inner .projects-link .project-img-block::before{
     content: "";
@@ -351,7 +352,7 @@ body.begie {
     .lottie-block { display: none; }
     /* project section */
     .projects-sec{
-        height: 350vh;
+        height: 100%;
         padding: 0px;
     }
     .projects-inner{
