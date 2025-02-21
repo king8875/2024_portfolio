@@ -135,7 +135,10 @@ body.begie {
     object-fit: cover;
     z-index: -10;
 }
-
+.projects-inner .projects-link{
+    width: 100%;
+    height: 100%;
+}
 .projects-inner .projects-link img{ transition: .5s ease; }
 .projects-inner .projects-link .project-img-block::before{
     content: "";
