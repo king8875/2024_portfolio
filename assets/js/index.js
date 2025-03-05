@@ -13,6 +13,7 @@ document.addEventListener('mousemove', (e) => {
     cursor.style.top = `${e.clientY}px`;
     cursor.style.left = `${e.clientX}px`;
 });
+
 // lottie
 lottie.loadAnimation({
     container: document.getElementById('lottie'),
@@ -25,22 +26,24 @@ lottie.loadAnimation({
 //text분리 함수
 const splitText = new SplitType('[data-text="split"]', { types: 'chars' });
 
+// 상단 왼쪽 nav link
+const toProjects = document.querySelector(".project-link");
+const toContact = document.querySelector(".contact-link");
 
-// lenis scrollTo
-$('.header-quick-item:nth-child(3)').click(function(e){
-    e.preventDefault();
+function projectLink() {
     gsap.to(window,{
         duration:1,
-        scrollTo: { y: ".projects-sec"}
+        scrollTo: { y: ".projects-sec" }
     });
-});
-$('.header-quick-item:last-child').click(function(e){
-    e.preventDefault();
+};
+function contactLink() {
     gsap.to(window,{
         duration:1,
         scrollTo: { y: ".contact-address-block"}
     });
-});
+};
+toProjects.addEventListener("click", projectLink);
+toContact.addEventListener("click", contactLink);
 
 // header gsap
 let lastScrollY = window.scrollY;
@@ -97,6 +100,18 @@ let mm = gsap.matchMedia();
 
 //pc
 mm.add("(min-width:769px)",function(){
+    
+    // 상단 왼쪽 nav link
+    const toContact = document.querySelector(".contact-link:nth-child(2)");
+    function contactLink() {
+        gsap.to(window,{
+            duration:1,
+            scrollTo: { y: ".contact-address-block"}
+        });
+    };
+    toContact.addEventListener("click", contactLink);
+
+
     $('.header-quick-block .header-quick-item:last-child').addClass('hidden');
 
     ScrollTrigger.create({
