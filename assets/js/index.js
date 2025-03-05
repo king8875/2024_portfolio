@@ -47,7 +47,7 @@ toContact.addEventListener("click", contactLink);
 
 // header gsap
 let lastScrollY = window.scrollY;
-const header = $('.header');
+const header = document.querySelector('.header');
 window.addEventListener('scroll',function(){
     const currentScrollY = window.scrollY;
     if(currentScrollY > lastScrollY){
@@ -56,10 +56,6 @@ window.addEventListener('scroll',function(){
         gsap.to(header, {y:'0%', duration: 1});
     }
     lastScrollY = currentScrollY; 
-});
-$('.header-quick-item').on('click',function(){
-    $('.header-quick-item').removeClass("on");
-    $(this).addClass('on');
 });
 
 // contact gsap
@@ -95,24 +91,22 @@ const marquee = gsap.to('.footer-marquee-block',{
     }
 });
 
-
 let mm = gsap.matchMedia();
-
 //pc
 mm.add("(min-width:769px)",function(){
-    
+    const toContact = document.querySelector(".contact-link.mov");
+    const toContactSec = document.querySelector(".contact-link:nth-child(2)");
+
     // 상단 왼쪽 nav link
-    const toContact = document.querySelector(".contact-link:nth-child(2)");
+    toContactSec.classList.remove('hidden');
+    toContact.classList.add('hidden');
     function contactLink() {
         gsap.to(window,{
             duration:1,
             scrollTo: { y: ".contact-address-block"}
         });
     };
-    toContact.addEventListener("click", contactLink);
-
-
-    $('.header-quick-block .header-quick-item:last-child').addClass('hidden');
+    toContactSec.addEventListener("click", contactLink);
 
     ScrollTrigger.create({
         trigger:'.sidepj-sec',
@@ -122,12 +116,9 @@ mm.add("(min-width:769px)",function(){
             targets:"body",
             className:"begie"
         },
-        
     });
+
     // intro gsap
-    gsap.set('.intro-tx .char-wrap',{autoAlpha:0});
-
-
     gsap.to('.intro-sec .intro-inner .intro-tx .char', {
         delay:0.2,
         y:0,
@@ -148,11 +139,11 @@ mm.add("(min-width:769px)",function(){
     })
 
     const intro = gsap.timeline();
-    intro.to('.intro-tx .char-wrap',{ 
+    intro.to('.intro-tx',{ 
         x:0,
         duration:0.4,
         autoAlpha:1,
-        delay:0.3
+        delay:0.5
     })
     intro.from('.header',{autoAlpha:0});
 
@@ -187,7 +178,7 @@ mm.add("(min-width:769px)",function(){
             scrub:1,
             onEnter: function(){
                 gsap.to('.bottom-overlay',{autoAlpha:0});
-                $('.custom-cursor').addClass('white');
+                document.querySelector('.custom-cursor').classList.add('white');
             },
             onLeaveBack: function(){
                 gsap.to('.bottom-overlay',{autoAlpha:1});
@@ -197,9 +188,9 @@ mm.add("(min-width:769px)",function(){
 });
 //mobie
 mm.add("(max-width:768px)",function(){
-    $('.header-quick-item').removeClass('hidden');
+    const toContact = document.querySelector(".contact-link.mov");
+    toContact.classList.remove('hidden');
     // intro gsap
-    gsap.set('.intro-tx .char-wrap',{autoAlpha:0});
     gsap.to('.intro-sec .intro-inner .intro-tx .char', {
         delay:0.2,
         y:0,
@@ -209,7 +200,7 @@ mm.add("(max-width:768px)",function(){
         }
     });
 
-    const introtx = gsap.to('.intro-tx .char-wrap',{
+    const introtx = gsap.to('.intro-tx',{
         scrollTrigger : {
             trigger :'.intro-sec',
             start:"50% 50%",
