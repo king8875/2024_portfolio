@@ -24,7 +24,7 @@ lottie.loadAnimation({
 });
 
 //text분리 함수
-const splitText = new SplitType('[data-text="split"]', { types: 'chars' });
+// const splitText = new SplitType('[data-text="split"]', { types: 'chars' });
 
 // 상단 왼쪽 nav link
 const toProjects = document.querySelector(".project-link");
