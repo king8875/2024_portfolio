@@ -40,7 +40,7 @@ body.begie {
     align-items: flex-end;
 }
 .intro-sec .intro-inner .intro-tx{
-    font-size: 14vw;
+    font-size: 13vw;
     font-weight: 700;
     font-family: var(--font-en);
 }
@@ -348,7 +348,7 @@ body.begie {
 /* mobile */
 @media (max-width:768px) {
     /* intro section */
-    .intro-sec .intro-inner .intro-tx{ font-size: 23vw; }
+    .intro-sec .intro-inner .intro-tx{ font-size: 20vw; }
     /* about section */
     .about-inner .about-left-block{ font-size: 18vw; }
     .about-inner .about-right-block{ font-size: 3vw; }
