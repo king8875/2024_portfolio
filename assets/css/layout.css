@@ -78,7 +78,6 @@
 .footer{ position: relative; }
 .footer .footer-inner{
     width: 100vw;
-    height: 100vh;
 }
 .contact-block .contact-intro-block{
     width: 100vw;
@@ -95,12 +94,11 @@
     font-weight: 900;
     text-transform: uppercase;
     font-family: var(--font-en);
-    letter-spacing: 1vw;
+    /* letter-spacing: 1vw; */
 }
 .contact-address-block{
     position: relative;
     padding-top: 100px;
-    width: 100vw;
     height: 100vh;
 }
 .address-content{
@@ -183,17 +181,23 @@
     .header-contact-block{ display: none; }
 
     /* footer */
-    .footer .footer-inner{ height: 100vh; }
-    .contact-block .contact-intro-block{ height: 300vh; }
+    .footer{
+        position: relative;
+
+    }
+    .footer .footer-inner{ 
+    }
+    .contact-block .contact-intro-block{ height: 200vh; }
     .contact-block .contact-intro-block .contact-tit{
-        font-size: 34vw;
+        width: 100%;
+        font-size: 30vw;
         letter-spacing: 1vw;
     }
     .contact-address-block{
-        height: 80vh;
-        padding-top: 0px;
         display: flex;
         align-items: center;
+        height: 80vh;
+        padding-top: 0px;
     }
     .address-content{
         padding: 0px 20px;
