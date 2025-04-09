@@ -163,7 +163,7 @@ mm.add("(min-width:769px)",function(){
             trigger: '.projects-sec',
             start:"0% 0%",
             end: "100% 100%",
-            scrub: 1,
+            scrub: 2,
             invalidateOnRefresh: true,
         },
         xPercent: -100,
